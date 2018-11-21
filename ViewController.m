@@ -16,7 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"点击" forState:UIControlStateNormal];
+    btn.frame = CGRectMake(100, 200, 100, 50);
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+    
+    //    NSArray *array = @[@"chenfanfang", nilStr];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:nil forKey:@"ad"];
+    
+}
+    
+- (void)btnAction
+{
+    NSLog(@"按钮点击");
 }
 
 
